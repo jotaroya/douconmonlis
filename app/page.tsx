@@ -207,12 +207,15 @@ function PlayerScreen({
           <div className="h-full bg-emerald-500 transition-all" style={{ width: `${progress}%` }} />
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          <Btn onClick={() => onSeek(-3)}>3秒前</Btn>
-          <Btn onClick={onPlayPause} variant="solid" className="min-w-28">{isPlaying ? "一時停止" : "再生"}</Btn>
-          <Btn onClick={() => onSeek(3)}>3秒後</Btn>
-          <Btn onClick={onRestart}>音声最初へ</Btn>
-        </div>
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        <Btn onClick={() => onSeek(-3)}>3秒前</Btn>
+        <Btn onClick={onPlayPause} variant="solid" className="min-w-28">
+          {isPlaying ? "一時停止" : "再生"}
+        </Btn>
+        <Btn onClick={() => onSeek(3)}>3秒後</Btn>
+        <Btn onClick={() => onSeek(10)}>10秒後</Btn>
+        <Btn onClick={onRestart}>音声最初へ</Btn>
+      </div>
 
         <div className="mt-6">
           <div className="text-center text-sm mb-2">{rate.toFixed(1)}倍</div>
