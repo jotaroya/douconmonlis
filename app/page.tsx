@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import data from "./audioIndex.json" assert { type: "json" };
+import data from "./audioIndex.json";
 
 // ============================
 // DouConMonLis（道コン問リス）
